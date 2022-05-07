@@ -10,6 +10,7 @@ divTools.classList.add("div-tools");
 const buttonAddCircles = document.createElement("button");
 buttonAddCircles.id = "buttonAddCircles";
 buttonAddCircles.classList.add("button");
+buttonAddCircles.classList.add("button-add");
 buttonAddCircles.type = "button";
 buttonAddCircles.onclick = () => addCircle();
 buttonAddCircles.innerHTML="Add Circles";
@@ -17,6 +18,7 @@ buttonAddCircles.innerHTML="Add Circles";
 const buttonRemoveCircles = document.createElement("button");
 buttonRemoveCircles.id = "buttonRemoveCircles";
 buttonRemoveCircles.classList.add("button");
+buttonRemoveCircles.classList.add("button-remove");
 buttonRemoveCircles.type = "button";
 buttonRemoveCircles.onclick = () => this.deleteAllCircles();
 buttonRemoveCircles.innerHTML="Remove Circles";
@@ -50,6 +52,15 @@ function addCircle() {
 
 function disableCircle(event) {
     event.target.style.display = "none";
+}
+
+document.body.onkeydown = function (event) {
+    if (event.ctrlKey) {
+       const circles = document.getElementsByClassName('circle');
+        for (let circle of circles) {
+            circle.style.display = "block";
+        }
+    }
 }
 
 function deleteAllCircles() {

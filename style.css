@@ -7,8 +7,15 @@
     margin-bottom: 50px;
 }
 
+.button-add {
+    background-color: #4CAF50;
+}
+
+.button-remove {
+    background-color: #ff0000;
+}
+
 .button {
-    background-color: #4CAF50; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
