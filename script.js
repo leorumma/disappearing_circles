@@ -43,7 +43,7 @@ buttonRemoveDarkcyanCircle.classList.add("button");
 buttonRemoveDarkcyanCircle.classList.add("button-darkcyan");
 buttonRemoveDarkcyanCircle.type = "button";
 buttonRemoveDarkcyanCircle.onclick = () => deleteCirclesByColor('darkcyan-circle', 'darkcyan');
-buttonRemoveDarkcyanCircle.innerHTML = "Remove darkcyan Circles";
+buttonRemoveDarkcyanCircle.innerHTML = "Remove Darkcyan Circles";
 
 const buttonRemoveYellowCircle = document.createElement("button");
 buttonRemoveYellowCircle.id = "buttonYellowCircle";
@@ -51,7 +51,7 @@ buttonRemoveYellowCircle.classList.add("button");
 buttonRemoveYellowCircle.classList.add("button-yellow");
 buttonRemoveYellowCircle.type = "button";
 buttonRemoveYellowCircle.onclick = () => deleteCirclesByColor('yellow-circle', 'yellow');
-buttonRemoveYellowCircle.innerHTML = "Remove yellow Circles";
+buttonRemoveYellowCircle.innerHTML = "Remove Yellow Circles";
 
 const buttonRemoveOrangeCircle = document.createElement("button");
 buttonRemoveOrangeCircle.id = "buttonOrangeCircle";
