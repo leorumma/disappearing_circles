@@ -25,18 +25,20 @@ buttonRemoveCircles.innerHTML="Remove Circles";
 
 const inputNumberCircles = document.createElement("input");
 inputNumberCircles.id = "inputNumberCircles"
+inputNumberCircles.placeholder = "Enter the number of circles to be created";
 inputNumberCircles.classList.add("input");
 
 divTools.appendChild(buttonRemoveCircles);
 divTools.appendChild(buttonAddCircles);
 divTools.appendChild(inputNumberCircles);
 
+document.body.onkeydown = (event) => this.enableAllCircles(event);
 document.body.appendChild(divTools);
 
 function addCircle() {
     let circlesNumber = parseInt(document.getElementById("inputNumberCircles").value);
     if (circlesNumber == null || isNaN(circlesNumber)) {
-        alert("enter only positive numbers");
+        alert("Enter only positive numbers");
         return;
     }
     for (let i = circlesNumber; i > 0; i--) {
@@ -54,9 +56,9 @@ function disableCircle(event) {
     event.target.style.display = "none";
 }
 
-document.body.onkeydown = function (event) {
+function enableAllCircles(event) {
     if (event.ctrlKey) {
-       const circles = document.getElementsByClassName('circle');
+        const circles = document.getElementsByClassName('circle');
         for (let circle of circles) {
             circle.style.display = "block";
         }
