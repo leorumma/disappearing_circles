@@ -15,6 +15,22 @@
     background-color: #ff0000;
 }
 
+.button-blue {
+    background-color: blue;
+}
+
+.button-darkcyan {
+    background-color: darkcyan;
+}
+
+.button-yellow {
+    background-color: yellow;
+}
+
+.button-orange {
+    background-color: orange;
+}
+
 .button {
     border: none;
     color: white;
@@ -39,8 +55,8 @@
     text-align: center;
 }
 
-.green-circle {
-    background-color: green;
+.darkcyan-circle {
+    background-color: darkcyan;
 }
 .blue-circle {
     background-color: blue;

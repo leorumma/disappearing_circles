@@ -1,5 +1,5 @@
 const CircleType = [
-    'green-circle',
+    'darkcyan-circle',
     'yellow-circle',
     'blue-circle',
     'orange-circle'
@@ -16,6 +16,11 @@ buttonAddCircles.type = "button";
 buttonAddCircles.onclick = () => addCircle();
 buttonAddCircles.innerHTML="Add Circles";
 
+const inputNumberCircles = document.createElement("input");
+inputNumberCircles.id = "inputNumberCircles"
+inputNumberCircles.placeholder = "Enter the number of circles to be created";
+inputNumberCircles.classList.add("input");
+
 const buttonRemoveCircles = document.createElement("button");
 buttonRemoveCircles.id = "buttonRemoveCircles";
 buttonRemoveCircles.classList.add("button");
@@ -24,14 +29,45 @@ buttonRemoveCircles.type = "button";
 buttonRemoveCircles.onclick = () => this.deleteAllCircles();
 buttonRemoveCircles.innerHTML="Remove Circles";
 
-const inputNumberCircles = document.createElement("input");
-inputNumberCircles.id = "inputNumberCircles"
-inputNumberCircles.placeholder = "Enter the number of circles to be created";
-inputNumberCircles.classList.add("input");
+const buttonRemoveBlueCircle = document.createElement("button");
+buttonRemoveBlueCircle.id = "buttonBlueCircle";
+buttonRemoveBlueCircle.classList.add("button");
+buttonRemoveBlueCircle.classList.add("button-blue");
+buttonRemoveBlueCircle.type = "button";
+buttonRemoveBlueCircle.onclick = () => deleteCirclesByColor('blue-circle', 'blue');
+buttonRemoveBlueCircle.innerHTML="Remove Blue Circles";
+
+const buttonRemoveDarkcyanCircle = document.createElement("button");
+buttonRemoveDarkcyanCircle.id = "buttonDarkcyanCircle";
+buttonRemoveDarkcyanCircle.classList.add("button");
+buttonRemoveDarkcyanCircle.classList.add("button-darkcyan");
+buttonRemoveDarkcyanCircle.type = "button";
+buttonRemoveDarkcyanCircle.onclick = () => deleteCirclesByColor('darkcyan-circle', 'darkcyan');
+buttonRemoveDarkcyanCircle.innerHTML="Remove darkcyan Circles";
+
+const buttonRemoveYellowCircle = document.createElement("button");
+buttonRemoveYellowCircle.id = "buttonYellowCircle";
+buttonRemoveYellowCircle.classList.add("button");
+buttonRemoveYellowCircle.classList.add("button-yellow");
+buttonRemoveYellowCircle.type = "button";
+buttonRemoveYellowCircle.onclick = () => deleteCirclesByColor('yellow-circle', 'yellow');
+buttonRemoveYellowCircle.innerHTML="Remove yellow Circles";
+
+const buttonRemoveOrangeCircle = document.createElement("button");
+buttonRemoveOrangeCircle.id = "buttonOrangeCircle";
+buttonRemoveOrangeCircle.classList.add("button");
+buttonRemoveOrangeCircle.classList.add("button-orange");
+buttonRemoveOrangeCircle.type = "button";
+buttonRemoveOrangeCircle.onclick = () => deleteCirclesByColor('orange-circle', 'orange');
+buttonRemoveOrangeCircle.innerHTML="Remove Orange Circles";
 
 divTools.appendChild(buttonRemoveCircles);
 divTools.appendChild(buttonAddCircles);
 divTools.appendChild(inputNumberCircles);
+divTools.appendChild(buttonRemoveBlueCircle);
+divTools.appendChild(buttonRemoveYellowCircle);
+divTools.appendChild(buttonRemoveOrangeCircle);
+divTools.appendChild(buttonRemoveDarkcyanCircle);
 
 document.body.onkeydown = (event) => this.enableAllCircles(event);
 document.body.appendChild(divTools);
@@ -71,5 +107,17 @@ function deleteAllCircles() {
     circles.forEach(circle => {
        circle.remove();
     });
-    alert("all circles have been removed")
+    alert("All circles have been removed")
+}
+
+function deleteCirclesByColor(circleClass, color) {
+    const circles = document.querySelectorAll(`.${circleClass}`);
+    if (circles.length === 0) {
+        alert(`No ${color} circle found`)
+        return;
+    }
+    circles.forEach(circle => {
+        circle.remove();
+    })
+    alert(`All ${color} circles have been deleted`);
 }
