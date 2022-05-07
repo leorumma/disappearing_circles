@@ -39,14 +39,18 @@
     text-align: center;
 }
 
-.red-circle {
-    background-color: red;
+.green-circle {
+    background-color: green;
 }
 .blue-circle {
     background-color: blue;
 }
 .yellow-circle {
     background-color: yellow;
+}
+
+.orange-circle {
+    background-color: orange;
 }
 
 .div-tools {

@@ -1,7 +1,8 @@
 const CircleType = [
-    'red-circle',
+    'green-circle',
     'yellow-circle',
-    'blue-circle'
+    'blue-circle',
+    'orange-circle'
 ]
 
 const divTools = document.createElement("div");
