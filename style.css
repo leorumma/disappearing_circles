@@ -46,7 +46,7 @@
 }
 
 .button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .input {
@@ -58,9 +58,11 @@
 .darkcyan-circle {
     background-color: darkcyan;
 }
+
 .blue-circle {
     background-color: blue;
 }
+
 .yellow-circle {
     background-color: yellow;
 }
