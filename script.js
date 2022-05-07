@@ -104,6 +104,10 @@ function enableAllCircles(event) {
 
 function deleteAllCircles() {
     const circles = document.querySelectorAll('.circle');
+    if (circles.length === 0) {
+        alert(`No circle found`);
+        return;
+    }
     circles.forEach(circle => {
        circle.remove();
     });
